@@ -152,12 +152,14 @@ textarea {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
+  display: block;
+  height: 100%;
 }
 
 a {
@@ -193,55 +195,27 @@ a:hover {
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 100%;
 }
 
-.span12 {
-  width: 940px;
-}
-
-.span11 {
-  width: 860px;
-}
-
-.span10 {
-  width: 780px;
-}
 
 .span9 {
-  width: 700px;
+  width: 100%;
 }
 
-.span8 {
-  width: 620px;
-}
-
-.span7 {
-  width: 540px;
-}
 
 .span6 {
-  width: 460px;
+  width: 65%;
 }
 
 .span5 {
-  width: 380px;
+  width: 550px;
 }
-
-.span4 {
-  width: 300px;
+. span5 img{
+  text-align: center;
 }
-
 .span3 {
-  width: 220px;
-}
-
-.span2 {
-  width: 140px;
-}
-
-.span1 {
-  width: 60px;
+  width: 25%;
 }
 
 .offset12 {

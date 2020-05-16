@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>search.html</title>
+
+    <!-- Styles -->
+    
+    <link href="search-css/bootstrap.css" rel="stylesheet" />
+    <link href="search-css/style.css" rel="stylesheet" />
+
+    <style type="text/css">
+	.auto-style1 {
+		width: 100%;
+		zoom: 1;
+		text-align: right;
+	}
+	</style>
+  <body>
+
+
+  <div class="container">
+
+  <!-- Masthead
+  ================================================== -->
+  <header>
+
+	  <div class="row">
+		  <div class="logo">
+			  <a href="index.html"><img src="img/logo.png" alt="" /></a>
+		  </div><!-- logo -->
+		  <div class="navigation">
+			  <div id="menu" class="fix-fish-menu clearfix">
+				  <ul id="nav" class="sf-menu">
+					  <li><a href="index.html">首页</a></li>
+					  <li><a href="#">个人空间</a></li>
+					  <li> <a href="#">写博客</a></li>
+					  <li> <a href="login.html">登录/注册</a></li>
+				  </ul><!-- end #nav  -->
+			  </div><!-- end #menu  -->
+		  </div><!-- navigation -->
+		  <form class="search">
+			  <input type="text" name="search" value="SEARCH" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}">
+			  <div class="button-row">
+				  <input type="button" class="search-button-active" value="搜索博文" onclick="location.href='search.html'">
+				  <input type="button" class="search-button" value="搜索标签" onclick="location.href='search.html'">
+			  </div>
+		  </form>
+	  </div><!-- row -->
+
+  </header>
+
+
+
+  <!-- Blog
+  ================================================== -->
+    <div class="row entry-blog">
+	  <div class="span9">
+
+    	<!-- START POST #1 -->
+	    <div class="row">
+  	      <div class="span3">
+	        <div class="entry-meta clearfix">
+	          	<span><strong><i class="icon-user"></i> 作者：</strong> <a href="#">一个用户名</a></span>
+	          	<span><strong><i class="icon-comment"></i> 评论：</strong> <a href="#">7</a></span>
+				<span><strong><i class="icon-heart"></i> 点赞：</strong> <a href="#">311</a></span>
+	          	<span><strong><i class="icon-tags"></i> 标签:</strong></span>
+	          	<ul class="tags clearfix">
+      	        	<li><a href="#">标签1</a></li>
+	            	<li><a href="#">标签2</a></li>
+	            	<li><a href="#">标签3</a></li>
+			    	<li><a href="#">标签4</a></li>
+	           		<li><a href="#">标签5</a></li>
+		      	</ul>
+	        </div><!-- entry-meta -->
+	      </div><!-- span3 -->
+
+	      <!-- POST FORMAT - IMAGE -->
+	      <div class="span6">
+	        <div class="row">
+	          <div class="span9 format-image">
+	            <div class="span5 thumb-post view">
+	              <a href="#"><img src="img/blog/img01.jpg" alt=""/></a>
+	              <div class="post-date-meta">
+                	<span class="month">July</span>
+              		<span class="date">05</span>
+            	  </div><!-- post-date-meta -->
+	        	</div><!-- thumb-post -->
+	        	<div class="span9 entry-text">
+				  	<h3><a href="blog-post.html">我是一个稍微长一点也能凑合过为了凑字数这里写的长一点的文章标题</a></h3>
+	        	  	<p>我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。</p>
+					<a class="btn" href="blog-post.html">阅读全文</a>
+	        	</div><!-- entry-text -->
+	          </div><!-- span6 -->
+	        </div><!-- row -->
+	      </div><!-- span6 -->
+	    </div><!-- row -->
+
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #1 -->
+
+		<!-- ============================================================================================= -->
+
+    	<!-- START POST #2 -->
+		  <div class="row entry-post">
+			  <div class="span3">
+				  <div class="entry-meta clearfix">
+					  <span><strong><i class="icon-user"></i> 作者：</strong> <a href="#">一个用户名</a></span>
+					  <span><strong><i class="icon-comment"></i> 评论：</strong> <a href="#">7</a></span>
+					  <span><strong><i class="icon-heart"></i> 点赞：</strong> <a href="#">311</a></span>
+					  <span><strong><i class="icon-tags"></i> 标签:</strong></span>
+					  <ul class="tags clearfix">
+						  <li><a href="#">标签1</a></li>
+						  <li><a href="#">标签2</a></li>
+						  <li><a href="#">标签3</a></li>
+						  <li><a href="#">标签4</a></li>
+						  <li><a href="#">标签5</a></li>
+					  </ul>
+
+					  <!-- <div class="entry-share">
+                        <span><strong><i class="icon-share"></i> Share:</strong></span>
+                      </div> --> <!-- entry-share -->
+				  </div><!-- entry-meta -->
+			  </div><!-- span3 -->
+
+			  <!-- POST FORMAT - IMAGE -->
+			  <div class="span6">
+				  <div class="row">
+					  <div class="span9 format-image">
+						  <div class="span9 entry-text">
+							  <h3><a href="blog-post.html">我是一个没有图片的文章标题</a></h3>
+							  <p>我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。我随手敲键盘就可以打出完美的200个字。</p>
+							  <a class="btn" href="blog-post.html">阅读全文</a>
+						  </div><!-- entry-text -->
+					  </div><!-- span6 -->
+				  </div><!-- row -->
+			  </div><!-- span6 -->
+		  </div><!-- row -->
+
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #2 -->
+
+		<!-- ============================================================================================= -->
+
+    	<!-- START POST #3 -->
+		  <div class="row entry-post">
+			  <div class="span3">
+				  <div class="entry-meta clearfix">
+					  <span><strong><i class="icon-user"></i> 作者：</strong> <a href="#">一个用户名</a></span>
+					  <span><strong><i class="icon-comment"></i> 评论：</strong> <a href="#">7</a></span>
+					  <span><strong><i class="icon-heart"></i> 点赞：</strong> <a href="#">311</a></span>
+					  <span><strong><i class="icon-tags"></i> 标签:</strong></span>
+					  <ul class="tags clearfix">
+						  <li><a href="#">标签1</a></li>
+						  <li><a href="#">标签2</a></li>
+						  <li><a href="#">标签3</a></li>
+						  <li><a href="#">标签4</a></li>
+						  <li><a href="#">标签5</a></li>
+					  </ul>
+				  </div><!-- entry-meta -->
+			  </div><!-- span3 -->
+
+			  <!-- POST FORMAT - IMAGE -->
+			  <div class="span6">
+				  <div class="row">
+					  <div class="span9 format-image">
+						  <div class="span5 thumb-post view">
+							  <a href="#"><img src="img/blog/img01.jpg" alt=""/></a>
+							  <div class="post-date-meta">
+								  <span class="month">July</span>
+								  <span class="date">05</span>
+							  </div><!-- post-date-meta -->
+						  </div><!-- thumb-post -->
+						  <div class="span9 entry-text">
+							  <h3><a href="blog-post.html">我是一个稍微长一点也能凑合过为了凑字数这里写的长一点的文章标题</a></h3>
+							  <p>我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。</p>
+							  <a class="btn" href="blog-post.html">阅读全文</a>
+						  </div><!-- entry-text -->
+					  </div><!-- span6 -->
+				  </div><!-- row -->
+			  </div><!-- span6 -->
+		  </div><!-- row -->
+
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #3 -->
+
+
+		<!-- ============================================================================================= -->
+
+
+    	<!-- START POST #4 SLIDESHOW -->
+		  <div class="row entry-post">
+			  <div class="span3">
+				  <div class="entry-meta clearfix">
+					  <span><strong><i class="icon-user"></i> 作者：</strong> <a href="#">一个用户名</a></span>
+					  <span><strong><i class="icon-comment"></i> 评论：</strong> <a href="#">7</a></span>
+					  <span><strong><i class="icon-heart"></i> 点赞：</strong> <a href="#">311</a></span>
+					  <span><strong><i class="icon-tags"></i> 标签:</strong></span>
+					  <ul class="tags clearfix">
+						  <li><a href="#">标签1</a></li>
+						  <li><a href="#">标签2</a></li>
+						  <li><a href="#">标签3</a></li>
+						  <li><a href="#">标签4</a></li>
+						  <li><a href="#">标签5</a></li>
+					  </ul>
+				  </div><!-- entry-meta -->
+			  </div><!-- span3 -->
+
+			  <!-- POST FORMAT - IMAGE -->
+			  <div class="span6">
+				  <div class="row">
+					  <div class="span9 format-image">
+						  <div class="span5 thumb-post view">
+							  <a href="#"><img src="img/blog/img01.jpg" alt=""/></a>
+							  <div class="post-date-meta">
+								  <span class="month">July</span>
+								  <span class="date">05</span>
+							  </div><!-- post-date-meta -->
+						  </div><!-- thumb-post -->
+						  <div class="span9 entry-text">
+							  <h3><a href="blog-post.html">我是一个稍微长一点也能凑合过为了凑字数这里写的长一点的文章标题</a></h3>
+							  <p>我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。</p>
+							  <a class="btn" href="blog-post.html">阅读全文</a>
+						  </div><!-- entry-text -->
+					  </div><!-- span6 -->
+				  </div><!-- row -->
+			  </div><!-- span6 -->
+		  </div><!-- row -->
+
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #4 -->
+
+
+		<!-- ============================================================================================= -->
+
+
+    	<!-- START POST #5 AUDIO -->
+		  <div class="row entry-post">
+			  <div class="span3">
+				  <div class="entry-meta clearfix">
+					  <span><strong><i class="icon-user"></i> 作者：</strong> <a href="#">一个用户名</a></span>
+					  <span><strong><i class="icon-comment"></i> 评论：</strong> <a href="#">7</a></span>
+					  <span><strong><i class="icon-heart"></i> 点赞：</strong> <a href="#">311</a></span>
+					  <span><strong><i class="icon-tags"></i> 标签:</strong></span>
+					  <ul class="tags clearfix">
+						  <li><a href="#">标签1</a></li>
+						  <li><a href="#">标签2</a></li>
+						  <li><a href="#">标签3</a></li>
+						  <li><a href="#">标签4</a></li>
+						  <li><a href="#">标签5</a></li>
+					  </ul>
+				  </div><!-- entry-meta -->
+			  </div><!-- span3 -->
+
+			  <!-- POST FORMAT - IMAGE -->
+			  <div class="span6">
+				  <div class="row">
+					  <div class="span9 format-image">
+						  <div class="span5 thumb-post view">
+							  <a href="#"><img src="img/blog/img01.jpg" alt=""/></a>
+							  <div class="post-date-meta">
+								  <span class="month">July</span>
+								  <span class="date">05</span>
+							  </div><!-- post-date-meta -->
+						  </div><!-- thumb-post -->
+						  <div class="span9 entry-text">
+							  <h3><a href="blog-post.html">我是一个稍微长一点也能凑合过为了凑字数这里写的长一点的文章标题</a></h3>
+							  <p>我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。</p>
+							  <a class="btn" href="blog-post.html">阅读全文</a>
+						  </div><!-- entry-text -->
+					  </div><!-- span6 -->
+				  </div><!-- row -->
+			  </div><!-- span6 -->
+		  </div><!-- row -->
+
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #5 -->
+
+
+		<!-- ============================================================================================= -->
+
+
+    	<!-- START POST #6 QUOTE -->
+		  <div class="row entry-post">
+			  <div class="span3">
+				  <div class="entry-meta clearfix">
+					  <span><strong><i class="icon-user"></i> 作者：</strong> <a href="#">一个用户名</a></span>
+					  <span><strong><i class="icon-comment"></i> 评论：</strong> <a href="#">7</a></span>
+					  <span><strong><i class="icon-heart"></i> 点赞：</strong> <a href="#">311</a></span>
+					  <span><strong><i class="icon-tags"></i> 标签:</strong></span>
+					  <ul class="tags clearfix">
+						  <li><a href="#">标签1</a></li>
+						  <li><a href="#">标签2</a></li>
+						  <li><a href="#">标签3</a></li>
+						  <li><a href="#">标签4</a></li>
+						  <li><a href="#">标签5</a></li>
+					  </ul>
+				  </div><!-- entry-meta -->
+			  </div><!-- span3 -->
+
+			  <!-- POST FORMAT - IMAGE -->
+			  <div class="span6">
+				  <div class="row">
+					  <div class="span9 format-image">
+						  <div class="span5 thumb-post view">
+							  <a href="#"><img src="img/blog/img01.jpg" alt=""/></a>
+							  <div class="post-date-meta">
+								  <span class="month">July</span>
+								  <span class="date">05</span>
+							  </div><!-- post-date-meta -->
+						  </div><!-- thumb-post -->
+						  <div class="span9 entry-text">
+							  <h3><a href="blog-post.html">我是一个稍微长一点也能凑合过为了凑字数这里写的长一点的文章标题</a></h3>
+							  <p>我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。我是一个可以很长很长很长的文章正文。但感觉还是截取前200字左右比较美观且合理。</p>
+							  <a class="btn" href="blog-post.html">阅读全文</a>
+						  </div><!-- entry-text -->
+					  </div><!-- span6 -->
+				  </div><!-- row -->
+			  </div><!-- span6 -->
+		  </div><!-- row -->
+
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #6 -->
+
+	    <!-- PAGINATION  -->
+       	<div class="row margin40">
+      	  <div class="span9">
+      	    <div class="pagination">
+              <ul>
+                <li><a href="#"></a></li>
+            	<li class="active"><a href="#">1</a></li>
+            	<li><a href="#">2</a></li>
+            	<li><a href="#">3</a></li>
+            	<li><a href="#">4</a></li>
+            	<li class="disabled"><a href="#">...</a></li>
+            	<li><a href="#">10</a></li>
+            	<li><a href="#"></a></li>
+          	  </ul>
+        	</div><!-- pagination -->
+      	  </div><!-- span6 -->
+    	</div><!-- row -->
+
+
+
+	  </div><!-- span9 -->
+	</div><!-- row -->
+
+
+<!-- Footer
+================================================== -->
+	  <footer class="footer slate_gray">
+		  <div class="container">
+			  <div class="row">
+				  <div class="col-sm-6">
+					  <p class="copyright">Copyright &copy; 2020.BaldCat All rights reserved.</p>
+				  </div>
+				  <div class="col-sm-6">
+					  <div class="social navbar-right">
+						  <p class="social__text">Contact us: xxxxxxx@xxxx.com</p>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </footer>
+
+    <!-- Javascripts
+    ================================================== -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/superfish.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
