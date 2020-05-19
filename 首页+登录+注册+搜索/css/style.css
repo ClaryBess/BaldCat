@@ -270,7 +270,7 @@ h2 {
 	text-align: center;
 	background-color: #EFEFEF;
 	padding: 30px 0;
-	float: left;
+	margin: 0 auto;
 	border-radius: 0px;
 }
 .content1 input[type="text"] {
@@ -305,7 +305,7 @@ h2 {
 .button-row {
 	width:100%;
 	margin-top:5%;
-	padding-bottom:40px;
+	padding-bottom:20px;
 }
 .sign-in {
 	padding:10px;
@@ -360,9 +360,10 @@ h2 {
 	background-color: #EFEFEF;
 	float:right;
 	padding: 30px 0 70px;
+	margin: 0 auto;
 	border-radius: 0px;
 }
-.content2 input[type="text"] {
+.content1 input[type="text"] {
 	padding:10px 40px 10px 10px;
 	width:70%;
 	border:1px solid #3A3A3A;
@@ -377,7 +378,7 @@ h2 {
 	border-radius: 4px;
 }
 
-.content2 input[type="email"] {
+.content1 input[type="email"] {
 	padding:10px 40px 10px 10px;
 	width:70%;
 	border:1px solid #3A3A3A;
@@ -391,7 +392,7 @@ h2 {
 	font-family: 'Muli', sans-serif;
 	border-radius: 4px;
 }
-.content2 input[type="password"] {
+.content1 input[type="password"] {
 	padding:10px 40px 10px 10px;
 	width:70%;
 	border:1px solid #3A3A3A;
@@ -429,4 +430,3 @@ h2 {
 
 
 
-	
