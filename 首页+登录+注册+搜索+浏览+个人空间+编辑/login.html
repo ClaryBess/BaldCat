@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Login</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- css files -->
 	<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
 	<link href="css/bootstrap-log.css" rel="stylesheet" type="text/css" />
@@ -39,13 +40,17 @@
 </header>
 <div class="log">
 	<div class="content1">
-		<h2>注册新账户</h2>
+		<h2>登录</h2>
 		<form>
-			<input type="text" name="userid" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'NAME AND SURNAME';}">
-			<input type="email" name="email" value="EMAIL ADDRESS" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EMAIL ADDRESS';}">
+			<input type="text" name="userid" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}">
 			<input type="password" name="psw" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}">
-			<input type="button" class="register" value="注册" onclick="location.href='index_afterLogin.html'">
+			<div class="button-row">
+				<input type="button" class="sign-in" value="登录" onclick="location.href='index_afterLogin.html'">
+				<input type="reset" class="reset" value="清空">
+				<div class="clear"></div>
+			</div>
 		</form>
+		<a href="register.html">注册账号</a>
 	</div>
 	<div class="clear"></div>
 </div>

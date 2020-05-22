@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>md转换为html</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+    <link href="search-css/style.css" rel='stylesheet' type='text/css' media="all" />
+    <link href="search-css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header>
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="row">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="" /></a>
+        </div><!-- logo -->
+        <div class="navigation">
+            <div id="menu" class="fix-fish-menu clearfix">
+                <ul id="nav" class="sf-menu" style="margin-left: 30px;">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="#">个人空间</a></li>
+                    <li class="active"> <a href="#">写博客</a></li>
+                    <li> <a href="#">个人信息</a></li>
+                    <li> <a href="index.html">注销</a> </li>
+                </ul><!-- end #nav  -->
+            </div><!-- end #menu  -->
+        </div><!-- navigation -->
+        <form class="search">
+            <input type="text" name="search" value="SEARCH" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'SEARCH';}" style="margin-left: 90px;">
+            <div class="button-row">
+                <input type="button" class="search-button" value="搜索博文" onclick="location.href='search.html'">
+                <input type="button" class="search-button" value="搜索标签" onclick="location.href='search.html'">
+            </div>
+        </form>
+    </div><!-- row -->
+
+</header>
+<div class="blog-container">
+    <div class="row" style="margin-left: 40px; ">
+        <h1 style="float:left;">🖊编写你的博文</h1>
+    </div>
+    <form class="blog-write">
+        <div class="row non-md" style="margin: 40px 0 5px 20%; ">
+            <p>博文标题：</p>
+            <input type="text" name="title" value="博文标题" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '博文标题';}">
+        </div>
+        <div class="row non-md" style="margin: 20px 0 25px 20%;">
+            <p>博文标签：</p>
+            <input type="text" name="tag" value="JAVA;算法;数据库" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'JAVA;算法;数据库';}">
+        </div>
+        <div id="area" style="width: 92%; margin: 0 auto;">
+            <table>
+                <tr>
+                    <td><textarea name="" id="md-area" onkeyup=mdSwitch()></textarea></td>
+                    <td>
+                        <div id="show-area" class="clearfix"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="file"  name="file"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="blog-button-row">
+            <input type="button" class="submit-blog" value="提交" onclick="location.href='#'">
+            <input type="reset" class="reset-blog" value="清空">
+        </div>
+    </form>
+</div>
+<style>
+    .markdown-here-wrapper {
+        font-size: 16px;
+        line-height: 1.8em;
+        letter-spacing: 0.1em;
+    }
+
+    #area pre,
+    code {
+        font-size: 14px;
+        font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+        margin: auto 5px;
+    }
+
+    #area code {
+        white-space: pre-wrap;
+        border-radius: 2px;
+        display: inline;
+    }
+
+    #area pre {
+        font-size: 15px;
+        line-height: 1.4em;
+        display: block;
+    !important;
+    }
+
+    #area pre code {
+        white-space: pre;
+        overflow: auto;
+        border-radius: 3px;
+        padding: 1px 1px;
+        display: block !important;
+    }
+
+    #area strong,
+    b {
+        color: #BF360C;
+    }
+
+    #area em,
+    i {
+        color: #009688;
+    }
+
+    #area hr {
+        border: 1px solid #BF360C;
+        margin: 1.5em auto;
+    }
+
+    #area p {
+        margin: 1.5em 5px !important;
+    }
+
+    #area table,
+    pre,
+    dl,
+    blockquote,
+    q,
+    ul,
+    ol {
+        margin: 10px 5px;
+    }
+
+    #area ul,
+    ol {
+        padding-left: 15px;
+    }
+
+    #area li {
+        margin: 10px;
+    }
+
+    #area li p {
+        margin: 10px 0 !important;
+    }
+
+    #area ul ul,
+    ul ol,
+    ol ul,
+    ol ol {
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    #area ul {
+        list-style-type: circle;
+    }
+
+    #area dl {
+        padding: 0;
+    }
+
+    #area dl dt {
+        font-size: 1em;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    #area dl dd {
+        margin: 0 0 10px;
+        padding: 0 10px;
+    }
+
+    #area blockquote,
+    q {
+        border-left: 2px solid black;
+        padding: 0 10px;
+        color: #7F7F7F;
+        quotes: none;
+        margin-left: 1em;
+    }
+
+    #area blockquote::before,
+    blockquote::after,
+    q::before,
+    q::after {
+        content: none;
+    }
+
+    #area h1,
+    #area h2,
+    #area h3,
+    h4,
+    h5,
+    h6 {
+        margin: 20px 0 10px;
+        padding: 0;
+        font-style: bold !important;
+        color: black !important;
+        text-align: center !important;
+        margin: 1.5em 5px !important;
+        padding: 0.5em 1em !important;
+    }
+
+    #area h1 {
+        font-size: 24px !important;
+        border-bottom: 1px solid #ddd !important;
+    }
+
+    #area h2 {
+        font-size: 20px !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    #area h3 {
+        font-size: 18px;
+    }
+
+    #area h4 {
+        font-size: 16px;
+    }
+
+
+    #area table {
+        padding: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 1em;
+        font: inherit;
+        border: 0;
+        margin: 0 auto;
+    }
+
+    #area tbody {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    #area table tr {
+        border: 0;
+        border-top: 1px solid #CCC;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    #area table tr:nth-child(2n) {
+        background-color: #F8F8F8;
+    }
+
+    #area table tr th,
+    #area table tr td {
+        font-size: 16px;
+        border: 1px solid #CCC;
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+    #area table tr th {
+        font-weight: bold;
+        color: #eee;
+        border: 1px solid #009688;
+        background-color: #009688;
+    }
+</style>
+<style>
+    #area>table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    #area table tr td {
+        margin: 0;
+        padding: 6px;
+        border: 0;
+
+    }
+
+
+    #md-area {
+
+        width: 100%;
+        height: 600px;
+        font-size: 18px;
+        overflow: hidden;
+        font-weight: bold;
+        outline: none;
+    }
+
+    #show-area {
+        height: 610px;
+        background-color: #FCF6E5;
+        margin-top: -7px;
+    }
+
+    .clearfix:before {
+        content: "";
+        display: table;
+    }
+</style>
+<script>
+    function mdSwitch() {
+        var mdValue = document.getElementById("md-area").value;
+        var converter = new showdown.Converter();
+        var html = converter.makeHtml(mdValue);
+        document.getElementById("show-area").innerHTML = html;
+    }
+</script>
+<style>
+    .blog-container{
+        width: 90%;
+        background: #EFEFEF;
+        padding: 30px 0;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+    .blog-button-row{
+        float:right;
+        width: 100%;
+        margin: 10px 20px 20px 0;
+    }
+    .blog-button-row .submit-blog{
+        padding:7px;
+        background-color:#DA7B55;
+        width:80px;
+        border:none;
+        cursor:pointer;
+        color:#fff;
+        font-weight: 300;
+        font-family: 'Nunito', sans-serif;
+        font-size:18px;
+        margin-right: 3%;
+        float:right;
+        text-transform:uppercase;
+        border-radius:4px;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+    }
+    .blog-button-row .submit-blog:hover {
+        background-color:#F15A23;
+        color:#fff;
+    }
+    .blog-button-row .reset-blog {
+        padding:7px;
+        background-color:#585858;
+        width:80px;
+        border:none;
+        /*-- AgileITS --*/
+        cursor:pointer;
+        color:#fff;
+        font-size:18px;
+        float:right;
+        margin-right:30px;
+        font-weight: 300;
+        font-family: 'Nunito', sans-serif;
+        text-transform:uppercase;
+        border-radius:4px;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+    }
+    .blog-button-row .reset-blog:hover {
+        background-color:#3A3A3A;
+        color:#fff;
+    }
+</style>
+<div class="wrap wrap_white">
+    <div class="container title">
+        <h2> <br/></h2>
+    </div>
+</div>
+<footer class="footer slate_gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="copyright">Copyright &copy; 2020.BaldCat All rights reserved.</p>
+            </div>
+            <div class="col-sm-6">
+                <div class="social navbar-right">
+                    <p class="social__text">Contact us: xxxxxxx@xxxx.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
