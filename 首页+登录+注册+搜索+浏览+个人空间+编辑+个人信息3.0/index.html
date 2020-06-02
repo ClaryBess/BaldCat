@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- custom CSS -->
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <!-- END custom CSS -->
+        <title>Home</title>
+    </head>
+    <body >
+
+        <!-- Header -->
+        <header>
+
+            <!-- Navbar
+            ================================================== -->
+            <div class="row">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="" /></a>
+                </div><!-- logo -->
+                <div class="navigation">
+                    <div id="menu" class="fix-fish-menu clearfix">
+                        <ul id="nav" class="sf-menu">
+                            <li class="active"><a href="index.html">首页</a></li>
+                            <li><a href="login.html">个人空间</a></li>
+                            <li> <a href="login.html">写博客</a></li>
+                            <li> <a href="login.html">登录/注册</a></li>
+                        </ul><!-- end #nav  -->
+                    </div><!-- end #menu  -->
+                </div><!-- navigation -->
+                <form class="search">
+                    <input type="text" name="search" value="SEARCH" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'SEARCH';}">
+                    <div class="button-row">
+                        <input type="button" class="search-button" value="搜索博文" onclick="location.href='search.html'">
+                        <input type="button" class="search-button" value="搜索标签" onclick="location.href='search.html'">
+                    </div>
+                </form>
+            </div><!-- row -->
+
+        </header>
+        <!-- END header -->
+        <!-- header slider -->
+        <div class="slate_gray">
+            <div class="container">
+                <div class="row header_news_panel">
+                    <!-- Tab panes -->
+                    <div class="col-sm-8 tab-content tab-content_mob-p0">
+                        <div role="tabpanel" class="tab-pane fade in active" id="home">
+                            <img src="img/content/slide1.jpg" alt="main img" class="tab-pane__img">
+                            <div class="header_news_text tab-pane__block">
+                                <p class="tab-pane__category yel_line">一个标签名</p>
+                                <a class="tab-pane__title">一个博标题</a>
+                                <p class="tab-pane__text">一段博文内容（截取博文前30个字这种）</p>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="profile">
+                            <img src="img/content/slide2.jpg" alt="main img" class="tab-pane__img">
+                            <div class="header_news_text tab-pane__block">
+                                <p class="tab-pane__category yel_line">12-311</p>
+                                <a class="tab-pane__title">wsynb</a>
+                                <p class="tab-pane__text">很难解释wsy为什么那么nb，但wsy确实很nb</p>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="messages">
+                            <img src="img/content/slide1.jpg" alt="main img" class="tab-pane__img">
+                            <div class="header_news_text tab-pane__block">
+                                <p class="tab-pane__category yel_line">一个标签名</p>
+                                <a class="tab-pane__title">标题标题标题标题标题标题</a>
+                                <p class="tab-pane__text">叠纸策划今晚biss</p>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="settings">
+                            <img src="img/content/slide2.jpg" alt="main img" class="tab-pane__img">
+                            <div class="header_news_text tab-pane__block">
+                                <p class="tab-pane__category yel_line">王咪咪</p>
+                                    <a class="tab-pane__title">标题最好十个字左右，这个已经最长了</a>
+                                <p class="tab-pane__text">喵喵喵喵喵喵</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Tab panes -->
+                    <!-- Nav tabs -->
+                    <div class="col-sm-4 news-tabs">
+                        <p class="news-tabs__title h2">博文推荐</p>
+                        <ul class="news-tabs__nav nav nav-tabs shadow_text" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#home" role="tab" data-toggle="tab">
+                                    <span class="time">作者名</span>
+                                    博文标题，此处背景色和网站logo统一比较好看，等p个logo再改颜色
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#profile" role="tab" data-toggle="tab">
+                                    <span class="time">wsy</span>
+                                    wsynbwsynbwsynbwsynbwsynbwsynbwsynb
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#messages" role="tab" data-toggle="tab">
+                                    <span class="time">xxy</span>
+                                    我爱吃奥利给
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#settings" role="tab" data-toggle="tab">
+                                    <span class="time">王咪咪</span>
+                                    喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END Nav tabs -->
+                </div>
+            </div>
+        </div>
+        <!-- END header slider -->
+        <!-- top news-->
+        <section>
+            <!-- top news -->
+            <!-- title -->
+            <div class="wrap wrap_white">
+                <div class="container title">
+                    <h1 class="title__h1 underscore">热点博文</h1>
+                </div>
+            </div>
+            <!-- END title -->
+            <div class="rap wrap_gray pt20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="thumbnail thumbnail_big">
+                                <img src="img/content/news1.jpg" height="350" width="560" alt="News">
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <p class="news__category yellow-line">标签名</p>
+                                        <a href="#" class="news__head">一个标题</a>
+                                        <p class="news__desc">一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。一段内容，这里的内容看起来可以放180字。</p>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">作者名</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>评论数
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>浏览量
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news2.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <p class="news__category yellow-line">标签</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">标题标题标题标题标题标题</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">作者</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>评论
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>浏览量
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news3.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <p class="news__category yellow-line">12-311</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">大家都知道wsynb，那么wsy为什么这么nb呢？</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">不是wsy</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>294
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>2.9k
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news4.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <i class="icon-play"></i>
+                                        <p class="news__category yellow-line">老八专栏</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">今天xxy给大家表演一段吃奥利给，干了兄弟们</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">xxy</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>9
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>1.3k
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news5.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <p class="news__category yellow-line">编不出来</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">这里写那么二三十个字差不多了，从文章开头截取，结尾加上...</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">编不出来</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>58
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>8.8k
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news6.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <i class="icon-play"></i>
+                                        <p class="news__category yellow-line">编不出来</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">编不出来编不出来编不出来编不出来编不出来</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">编不出来</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>20
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>1.2k
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news7.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <p class="news__category yellow-line">编不出来</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">编不出来编不出来编不出来编不出来编不出来编不出来</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">编不出来</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>21
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>1.9k
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news8.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <i class="icon-play"></i>
+                                        <p class="news__category yellow-line">编不出来</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">编不出来编不出来编不出来编不出来编不出来</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">编不出来</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>17
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>2.0k
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="thumbnail thumbnail_small">
+                                <a href="#" class="thumbnail__link">
+                                    <img src="img/content/news9.jpg" height="153" width="270" alt="News">
+                                </a>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <p class="news__category yellow-line">编不出来</p>
+                                        <a href="#" class="news__link">
+                                            <p class="news__text">编不出来编不出来编不出来编不出来编不出来编不出来</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">编不出来</span>
+                                        <ul class="posted__icon">
+                                            <li>
+                                                <span>
+                                                <i class="icon-comment-empty"></i>29
+                                            </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                <i class="icon-eye"></i>2.3k
+                                            </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- btn load-->
+                <div class="ajax_load">
+                    <i class="icon-arrows-cw"></i>  &nbsp;Load more
+                    <svg width="128" height="40" viewBox="0 0 128 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect x='0' y='0' fill='none' width='128' height='40'></rect>
+                    </svg>
+                </div>
+                <!-- END btn load-->
+                <div class="row"><br></div>
+            </div>
+            <!-- /container-->
+        </section>
+        <!-- /top news -->
+        <!-- Footer -->
+        <footer class="footer slate_gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="copyright">Copyright &copy; 2020.BaldCat All rights reserved.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="social__text">Contact us: xxxxxxx@xxxx.com</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+        <!-- All JavaScript libraries -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Custom JavaScript -->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

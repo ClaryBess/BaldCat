@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>md转换为html</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+    <link href="search-css/style.css" rel='stylesheet' type='text/css' media="all" />
+    <link href="search-css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header>
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="row">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="" /></a>
+        </div><!-- logo -->
+        <div class="navigation">
+            <div id="menu" class="fix-fish-menu clearfix">
+                <ul id="nav" class="sf-menu" style="margin-left: 30px;">
+                    <li><a href="index_afterLogin.html">首页</a></li>
+                    <li><a href="profile_self.html">个人空间</a></li>
+                    <li class="active"> <a href="#">写博客</a></li>
+                    <li> <a href="edit.html">个人信息</a></li>
+                    <li> <a href="index.html">注销</a> </li>
+                </ul><!-- end #nav  -->
+            </div><!-- end #menu  -->
+        </div><!-- navigation -->
+        <form class="search">
+            <input type="text" name="search" value="SEARCH" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'SEARCH';}" style="margin-left: 90px;">
+            <div class="button-row">
+                <input type="button" class="search-button" value="搜索博文" onclick="location.href='search.html'">
+                <input type="button" class="search-button" value="搜索标签" onclick="location.href='search.html'">
+            </div>
+        </form>
+    </div><!-- row -->
+
+</header>
+<div class="blog-container">
+    <div class="row" style="margin-left: 5%; ">
+        <h1 style="float:left;">🖊编写你的博文</h1>
+    </div>
+    <form class="blog-write">
+        <div class="row non-md" style="margin: 40px 0 5px 20%; ">
+            <p>博文标题：</p>
+            <input type="text" name="title" value="博文标题" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '博文标题';}">
+        </div>
+        <div class="row non-md" style="margin: 20px 0 25px 20%;">
+            <p>博文标签：</p>
+            <input type="text" name="tag" value="JAVA;算法;数据库" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'JAVA;算法;数据库';}">
+        </div>
+        <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+        <script id="editor" type="text/plain" name="gdesc" style="width:95%;height:350px;margin-left: 5%;"></script>
+        <script type="text/javascript">
+            //实例化编辑器
+            var ue = UE.getEditor('editor', {
+                toolbars: [
+                    [
+                        'undo', //撤销
+                        'redo',
+                        'bold', //加粗
+                        'underline', //下划线
+                        'preview', //预览
+                        'horizontal', //分隔线
+                        'inserttitle', //插入标题
+                        'cleardoc', //清空文档
+                        'fontfamily', //字体
+                        'fontsize', //字号
+                        'paragraph', //段落格式
+                        'simpleupload', //单图上传
+                        'insertimage', //多图上传
+                        'attachment', //附件
+                        'inserttable', //插入表格
+                        'emotion', //表情
+                        'justifyleft', //居左对齐
+                        'justifyright', //居右对齐
+                        'justifycenter', //居中对
+                        'justifyjustify', //两端对齐
+                        'forecolor', //字体颜色
+                        'fullscreen', //全屏
+                        'edittip ', //编辑提示
+                        'customstyle', //自定义标题
+                        'template', //模板
+                    ]
+                ]
+            });
+        </script>
+        <div class="blog-button-row">
+            <input type="button" class="submit-blog" value="提交" onclick="location.href='#'">
+        </div>
+    </form>
+    <br/><br/>
+</div>
+<style>
+    .blog-container{
+        width: 100%;
+        background: #EFEFEF;
+        padding: 30px 0;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+    .blog-button-row .submit-blog{
+        padding:7px;
+        background-color:#DA7B55;
+        width:80px;
+        border:none;
+        cursor:pointer;
+        color:#fff;
+        font-weight: 300;
+        font-family: 'Nunito', sans-serif;
+        font-size:18px;
+        margin: 30px 5% 40px 0;
+        float:right;
+        text-transform:uppercase;
+        border-radius:4px;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+    }
+    .blog-button-row .submit-blog:hover {
+        background-color: #F15A23;
+        color: #fff;
+    }
+</style>
+
+<footer class="footer slate_gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="copyright">Copyright &copy; 2020.BaldCat All rights reserved.</p>
+            </div>
+            <div class="col-sm-6">
+                <div class="social navbar-right">
+                    <p class="social__text">Contact us: xxxxxxx@xxxx.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

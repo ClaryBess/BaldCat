@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<title>Login</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- css files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
+	<link href="css/bootstrap-log.css" rel="stylesheet" type="text/css" />
+	<!-- /css files -->
+</head>
+
+<body>
+<header>
+
+	<!-- Navbar
+    ================================================== -->
+	<div class="row">
+		<div class="logo">
+			<a href="index.html"><img src="img/logo.png" alt="" /></a>
+		</div><!-- logo -->
+		<div class="navigation">
+			<div id="menu" class="fix-fish-menu clearfix">
+				<ul id="nav" class="sf-menu">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="#">个人空间</a></li>
+					<li> <a href="#">写博客</a></li>
+					<li class="active"> <a href="login.html">登录/注册</a></li>
+				</ul><!-- end #nav  -->
+			</div><!-- end #menu  -->
+		</div><!-- navigation -->
+		<form class="search">
+			<input type="text" name="search" value="SEARCH" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}">
+			<div class="button-row">
+				<input type="button" class="search-button" value="搜索博文" onclick="location.href='search.html'">
+				<input type="button" class="search-button" value="搜索标签" onclick="location.href='search.html'">
+			</div>
+		</form>
+	</div><!-- row -->
+
+</header>
+<div class="log">
+	<div class="content1">
+		<h2>登录</h2>
+		<form>
+			<input type="text" name="userid" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}">
+			<input type="password" name="psw" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}">
+			<div class="button-row">
+				<input type="button" class="sign-in" value="登录" onclick="location.href='index_afterLogin.html'">
+				<input type="reset" class="reset" value="清空">
+				<div class="clear"></div>
+			</div>
+		</form>
+		<a href="register.html">注册账号</a>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="wrap wrap_white">
+	<div class="container title">
+		<h2> </h2>
+	</div>
+</div>
+
+<footer class="footer slate_gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="copyright">Copyright &copy; 2020.BaldCat All rights reserved.</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="social__text">Contact us: xxxxxxx@xxxx.com</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

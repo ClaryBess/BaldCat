@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>个人信息</title>
+
+    <!-- Styles -->
+    <link href="profile-css/bootstrap.css" rel="stylesheet" type='text/css' media="all" />
+    <link href="profile-css/style.css" rel="stylesheet" type="text/css" />
+
+
+<body>
+
+<div class="container">
+
+    <!-- Masthead
+    ================================================== -->
+    <header>
+
+        <div class="row">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt=""/></a>
+            </div><!-- logo -->
+            <div class="navigation">
+                <div id="menu" class="fix-fish-menu clearfix">
+                    <ul id="nav" class="sf-menu">
+                        <li><a href="index_afterLogin.html">首页</a></li>
+                        <li ><a href="profile_self.html">个人空间</a></li>
+                        <li><a href="markdown.html">写博客</a></li>
+                        <li class="active"> <a href="edit.html">个人信息</a></li>
+                        <li> <a href="index.html">注销</a> </li>
+                    </ul><!-- end #nav  -->
+                </div><!-- end #menu  -->
+            </div><!-- navigation -->
+            <form class="search" >
+                <div align="right" >
+                <input type="text" name="search" value="SEARCH">
+                </div>
+                <div class="button-row" align="left">
+                    <input type="button" class="search-button" value="搜索博文" onclick="location.href='search.html'">
+                    <input type="button" class="search-button" value="搜索标签" onclick="location.href='search.html'">
+                </div>
+            </form>
+        </div><!-- row -->
+
+    </header>
+
+    <!-- Blog
+    ================================================== -->
+    <div class="row entry-blog">
+        <!-- SIDEBAR -->
+        <div class="span10" >
+
+                <table align="center"width="100%" height="100%">
+                <tr class="entry-meta clearfix">
+                    <td width="27%"></td>
+                    <td >
+                        <br/>
+                        <div ><a class="btn" href="edit.html"><font size="3">🖊 修改个人信息 🖊</font></a>
+                        <br/><br/><br/>
+                            <span><strong><i class="icon-user"></i> <font size="3px"> 用户名：</font></strong>
+                                <a href="#"><font size="3px"> 奥力给</font></a></span><br/>
+                            <span><strong><i class="icon-pencil"></i><font size="3px"> 性别：</font></strong>
+                                <a href="#"><font size="3px">男</font></a></span><br/>
+                            <span><strong><i class="icon-time"></i><font size="3px"> 生日：</font></strong>
+                                <a href="#"><font size="3px">1999-11-11</font></a></span><br/>
+                        <!-- <div class="entry-share">
+                          <span><strong><i class="icon-share"></i> Share:</strong></span>
+                        </div> --> <!-- entry-share -->
+
+                            <span><strong><i class="icon-comment"></i><font size="3px"> 个人签名</font></strong></span>
+                            <p ><font size="3" color="#8d8d8d" ><strong> 难道这就是你分手的借口 如果让你重新来过
+                                你会不会爱我 爱情让人拥有快乐
+                                也会带来折磨 曾经和你一起走过
+                                传说中的爱度河 已经被我泪水淹没知
+                                变成痛苦的爱河</strong></font></p>
+                        </div>
+                        <div align="center">
+
+                            <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        </div>
+                    </td>
+                    <td width="30%"></td>
+                </tr>
+
+                </table>
+
+
+        </div><!-- span3 -->
+
+    </div><!-- row -->
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer slate_gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="copyright">Copyright &copy; 2020.BaldCat All rights reserved.</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social navbar-right">
+                        <p class="social__text">Contact us: xxxxxxx@xxxx.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascripts
+    ================================================== -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
