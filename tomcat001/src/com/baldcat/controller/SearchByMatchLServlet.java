@@ -15,6 +15,13 @@ import java.util.stream.Collectors;
 
 @WebServlet("/searchML")
 public class SearchByMatchLServlet extends HttpServlet {
+    /**
+     * 处理登录后全文匹配搜索的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");

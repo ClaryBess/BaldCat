@@ -21,6 +21,19 @@ public class BlogRepository {
         dataSource = new ComboPooledDataSource();
     }
 
+    /**
+     * 添加博客
+     * @param userID
+     * @param title
+     * @param content
+     * @param Path
+     * @param tag1
+     * @param tag2
+     * @param tag3
+     * @param tag4
+     * @param tag5
+     * @return
+     */
     public Blog add(int userID, String title, String content, String Path, String tag1, String tag2, String tag3, String tag4, String tag5){
         Connection connection = null;
         Blog blog = null;
@@ -43,6 +56,10 @@ public class BlogRepository {
         return blog;
     }
 
+    /**
+     * 添加博客评论
+     * @param BlogID
+     */
     public void addComment(int BlogID){
         Connection connection = null;
         try {
@@ -57,6 +74,10 @@ public class BlogRepository {
         }
     }
 
+    /**
+     * 添加赞同
+     * @param BlogID
+     */
     public void addLike(int BlogID){
         Connection connection = null;
         try {
@@ -71,6 +92,10 @@ public class BlogRepository {
         }
     }
 
+    /**
+     * 查找所有博客
+     * @return
+     */
     public List<Blog> findAll(){
         List<Blog> list = new ArrayList<>();
         Connection connection = null;
@@ -87,6 +112,11 @@ public class BlogRepository {
         return list;
     }
 
+    /**
+     * 通过tag查找博客
+     * @param tag
+     * @return
+     */
     public List<Blog> findByTag(String tag){
         List<Blog> list = new ArrayList<>();
         Connection connection = null;
@@ -103,6 +133,11 @@ public class BlogRepository {
         return list;
     }
 
+    /**
+     * 通过内容查找博客
+     * @param subContent
+     * @return
+     */
     public List<Blog> findByContent(String subContent){
         List<Blog> list = new ArrayList<>();
         Connection connection = null;
@@ -120,6 +155,11 @@ public class BlogRepository {
         return list;
     }
 
+    /**
+     * 通过用户查找博客
+     * @param UserID
+     * @return
+     */
     public List<Blog> findByUser(String UserID){
         List<Blog> list = new ArrayList<>();
         Connection connection = null;
@@ -136,6 +176,11 @@ public class BlogRepository {
         return list;
     }
 
+    /**
+     * 通过blogID查找博客
+     * @param BlogID
+     * @return
+     */
     public Blog findById(String BlogID){
         Blog blog =new Blog();
         Connection connection = null;
@@ -152,6 +197,10 @@ public class BlogRepository {
         return blog;
     }
 
+    /**
+     * 通过赞同数量排序
+     * @return
+     */
     public List<Blog> findOrderByLike(){
         List<Blog> list = new ArrayList<>();
         Connection connection = null;
@@ -172,6 +221,10 @@ public class BlogRepository {
         return list;
     }
 
+    /**
+     * 推荐博客
+     * @return
+     */
     public Blog recommend(){
         List<Blog> list = null;
         Blog blog = null;
@@ -198,6 +251,10 @@ public class BlogRepository {
         return blog;
     }
 
+    /**
+     * 通过ID删除
+     * @param id
+     */
     public void deleteById(Integer id){
         Connection connection = null;
         try {
@@ -212,6 +269,10 @@ public class BlogRepository {
         }
     }
 
+    /**
+     * 更新资源
+     * @param id
+     */
     public void updateResource(Integer id){
         Connection connection = null;
         try {

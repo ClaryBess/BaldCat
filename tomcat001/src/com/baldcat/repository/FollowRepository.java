@@ -20,6 +20,11 @@ public class FollowRepository {
         dataSource = new ComboPooledDataSource();
     }
 
+    /**
+     * 添加关注
+     * @param FollowUserID
+     * @param FollowedUserID
+     */
     public void add(Integer FollowUserID, Integer FollowedUserID){
         Connection connection = null;
         try {
@@ -34,6 +39,10 @@ public class FollowRepository {
         }
     }
 
+    /**
+     * 取消关注
+     * @param FollowID
+     */
     public void deleteById(Integer FollowID){
         Connection connection = null;
         try {
@@ -48,6 +57,12 @@ public class FollowRepository {
         }
     }
 
+    /**
+     *通过关注者、被关注者查找
+     * @param FollowUserID
+     * @param FollowedUserID
+     * @return
+     */
     public Follow findByUU(Integer FollowUserID, Integer FollowedUserID){
         Connection connection = null;
         Follow follow = null;
@@ -68,7 +83,11 @@ public class FollowRepository {
         return follow;
     }
 
-    // 查看用户关注了谁
+    /**
+     * 查看用户关注了谁
+     * @param FollowUserID
+     * @return
+     */
     public List<Follow> findFollow(Integer FollowUserID){
         List<Follow> list = new ArrayList<>();
         Connection connection = null;
@@ -89,7 +108,11 @@ public class FollowRepository {
         return list;
     }
 
-    // 查看粉丝
+    /**
+     * 查看粉丝
+     * @param FollowedUserID
+     * @return
+     */
     public List<Follow> findFans(Integer FollowedUserID){
         List<Follow> list = new ArrayList<>();
         Connection connection = null;

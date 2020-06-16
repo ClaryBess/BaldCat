@@ -21,6 +21,14 @@ public class EditServlet extends HttpServlet {
     static {
         userRepository = new UserRepository();
     }
+
+    /**
+     *修改个人信息的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");

@@ -15,6 +15,13 @@ import java.util.List;
 
 @WebServlet("/postL")
 public class PostLServlet extends HttpServlet {
+    /**
+     * 处理登录后博文浏览的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String BlogID=req.getParameter("BlogID");

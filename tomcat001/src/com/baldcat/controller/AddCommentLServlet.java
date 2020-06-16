@@ -17,6 +17,13 @@ import java.util.List;
 
 @WebServlet("/commentL")
 public class AddCommentLServlet extends HttpServlet {
+    /**
+     * 发表评论的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");

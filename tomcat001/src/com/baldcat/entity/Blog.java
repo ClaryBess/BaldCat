@@ -1,6 +1,5 @@
 package com.baldcat.entity;
 
-import com.baldcat.Handler.Handler;
 import com.baldcat.repository.UserRepository;
 
 import java.text.SimpleDateFormat;
@@ -123,6 +122,10 @@ public class Blog {
         Tag5 = tag5;
     }
 
+    /**
+     * 获取博客的所有标签
+     * @return
+     */
     public List<String> getTags(){
         List<String> tag=new ArrayList<>();
         if(getTag1()!=null)
@@ -138,24 +141,41 @@ public class Blog {
         return tag;
     }
 
+    /**
+     * 获取博客作者用户名
+     * @return
+     */
     public String getUserName(){
         UserRepository userRepository=new UserRepository();
         User user=userRepository.findById(UserID);
         return user.getName();
     }
 
+    /**
+     * 获取年份
+     * @return
+     */
     public String getYear(){
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy");
         Date date=new Date();
         return sdf.format(DateTime);
     }
 
+    /**
+     * 获取月份日期
+     * @return
+     */
     public String getMonthDay(){
         SimpleDateFormat sdf=new SimpleDateFormat("MM.dd");
         Date date=new Date();
         return sdf.format(DateTime);
     }
 
+    /**
+     * 获取摘要
+     * @param length
+     * @return
+     */
     public String getAbstarct(int length) {
         String input=getContent();
         if (input == null || input.trim().equals("")) {

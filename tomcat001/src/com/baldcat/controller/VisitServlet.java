@@ -13,6 +13,13 @@ import java.io.IOException;
 
 @WebServlet("/visit")
 public class VisitServlet extends HttpServlet {
+    /**
+     * 处理未登陆时访问用户主页的逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Handler handler=new Handler();

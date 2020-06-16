@@ -16,6 +16,13 @@ import java.util.List;
 
 @WebServlet("/post")
 public class PostServlet  extends HttpServlet {
+    /**
+     * 处理未登录时博文浏览的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String BlogID=req.getParameter("BlogID");
@@ -29,3 +36,4 @@ public class PostServlet  extends HttpServlet {
         req.getRequestDispatcher("blog-post.jsp").forward(req,resp);
     }
 }
+

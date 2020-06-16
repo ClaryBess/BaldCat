@@ -20,6 +20,11 @@ public class ResourceRepository {
         dataSource = new ComboPooledDataSource();
     }
 
+    /**
+     * 添加资源信息
+     * @param UserID
+     * @param Path
+     */
     public void add(int UserID,String Path){
         Connection connection = null;
         try {
@@ -34,6 +39,10 @@ public class ResourceRepository {
         }
     }
 
+    /**
+     * 根据ResourceID删除资源
+     * @param id
+     */
     public void deleteById(Integer id){
         Connection connection = null;
         try {
@@ -48,6 +57,10 @@ public class ResourceRepository {
         }
     }
 
+    /**
+     * 查找所有资源
+     * @return
+     */
     public List<Resource> findAll(){
         List<Resource> list = new ArrayList<>();
         Connection connection = null;
@@ -64,6 +77,10 @@ public class ResourceRepository {
         return list;
     }
 
+    /**
+     * 测试
+     * @param args
+     */
     public static void main(String[] args) {
         ResourceRepository resourceRepository = new ResourceRepository();
 //        resourceRepository.add(1,"http://baiduyun");

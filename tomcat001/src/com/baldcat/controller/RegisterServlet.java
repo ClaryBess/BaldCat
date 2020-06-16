@@ -18,6 +18,14 @@ import java.util.Date;
 public class RegisterServlet extends HttpServlet {
     private Handler handler=new Handler();
     private static SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+
+    /**
+     * 处理注册的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");

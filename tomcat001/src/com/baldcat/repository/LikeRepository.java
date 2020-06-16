@@ -17,6 +17,11 @@ public class LikeRepository {
         dataSource = new ComboPooledDataSource();
     }
 
+    /**
+     * 添加点赞信息
+     * @param blogID
+     * @param userID
+     */
     public void add(int blogID,int userID){
         Connection connection = null;
         try {
@@ -31,6 +36,10 @@ public class LikeRepository {
         }
     }
 
+    /**
+     * 根据LikeID删除点赞
+     * @param id
+     */
     public void deleteById(Integer id){
         Connection connection = null;
         try {
@@ -45,6 +54,12 @@ public class LikeRepository {
         }
     }
 
+    /**
+     * 查找点赞关系
+     * @param BlogID
+     * @param UserID
+     * @return
+     */
     public Likes findLike(Integer BlogID, Integer UserID){
         Likes likes = null;
         Connection connection = null;

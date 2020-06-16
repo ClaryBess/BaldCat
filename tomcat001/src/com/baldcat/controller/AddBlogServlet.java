@@ -21,6 +21,13 @@ import java.util.List;
 
 @WebServlet("/addBlog")
 public class AddBlogServlet extends HttpServlet {
+    /**
+     * 处理发布博文的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");

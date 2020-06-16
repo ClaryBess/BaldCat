@@ -19,6 +19,14 @@ public class FollowServlet extends HttpServlet {
     static {
         userRepository = new UserRepository();
     }
+
+    /**
+     *关注的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Handler handler=new Handler();

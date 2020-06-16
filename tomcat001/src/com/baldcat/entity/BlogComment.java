@@ -51,6 +51,10 @@ public class BlogComment {
         Content = content;
     }
 
+    /**
+     * 获取该评论的用户名
+     * @return
+     */
     public String getUserName(){
         UserRepository userRepository=new UserRepository();
         User user=userRepository.findById(UserID);

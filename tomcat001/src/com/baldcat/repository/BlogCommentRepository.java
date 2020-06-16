@@ -21,6 +21,12 @@ public class BlogCommentRepository {
         dataSource = new ComboPooledDataSource();
     }
 
+    /**
+     * 添加博客评论
+     * @param blogID
+     * @param userID
+     * @param content
+     */
     public void add(int blogID, int userID, String content){
         Connection connection = null;
         try {
@@ -35,6 +41,10 @@ public class BlogCommentRepository {
         }
     }
 
+    /**
+     * 删除博客评论
+     * @param CommentID
+     */
     public void delete(Integer CommentID){
         Connection connection = null;
         try {
@@ -49,6 +59,11 @@ public class BlogCommentRepository {
         }
     }
 
+    /**
+     * 查找博客的评论
+     * @param BlogID
+     * @return
+     */
     public List<BlogComment> findByBlog(String BlogID){
         List<BlogComment> list = new ArrayList<>();
         Connection connection = null;

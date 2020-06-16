@@ -48,6 +48,10 @@ public class User {
         return Gender;
     }
 
+    /**
+     * 识别用户性别
+     * @return
+     */
     public String printGender() {
         switch (getGender()){
             case "F":

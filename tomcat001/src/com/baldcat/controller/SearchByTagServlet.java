@@ -15,6 +15,13 @@ import java.util.stream.Collectors;
 
 @WebServlet("/searchT")
 public class SearchByTagServlet extends HttpServlet {
+    /**
+     * 处理未登陆时按标签搜索的业务逻辑
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
